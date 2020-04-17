@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom';
 // }
 
 const App = () => { // const App = function()
-const buttonText = ['hello',' ','world'];
+const buttonText = ['Hello',' ','world'];
 // const style = {backgroundColor:'red', color:'white'} SAME
 
     return(
@@ -26,8 +26,6 @@ const buttonText = ['hello',' ','world'];
             <button style={{backgroundColor:'black', color:'white'}}>
                 {buttonText}
             </button>
-
-
         </div>
     )
 }
