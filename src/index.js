@@ -12,14 +12,16 @@ import ReactDOM from 'react-dom';
 // }
 
 const App = () => { // const App = function()
-const buttonText = {text: 'submit'};
+// const buttonText = ['hello',' ','world'];
+const style = {backgroundColor:'red', color:'white'}
 
     return(
         <div>
             <label for="name" class="label">Enter email</label>
             <input id="name" type="text" />
-            <button style={{backgroundColor:'red', color:'white'}}>
-                { buttonText.text }
+            <button style={style}>
+                {/* { buttonText } */}
+                Submit
                 </button>
             </div>
     )
