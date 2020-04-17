@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 // Components
 
 // Reason why they use "className" instead of "class" is to avoid collisions
+// Example of "className" vs "class"
 // class App extends React.Component
 // className="label"
 
@@ -12,18 +13,22 @@ import ReactDOM from 'react-dom';
 // }
 
 const App = () => { // const App = function()
-// const buttonText = ['hello',' ','world'];
-const style = {backgroundColor:'red', color:'white'}
+const buttonText = ['hello',' ','world'];
+// const style = {backgroundColor:'red', color:'white'} SAME
 
     return(
         <div>
-            <label for="name" class="label">Enter email</label>
+            <label htmlFor="name" className="label">Enter email</label>
             <input id="name" type="text" />
-            <button style={style}>
-                {/* { buttonText } */}
-                Submit
-                </button>
-            </div>
+
+            {/* <button style={style}> Submit </button> */}
+
+            <button style={{backgroundColor:'black', color:'white'}}>
+                {buttonText}
+            </button>
+
+
+        </div>
     )
 }
 
@@ -32,3 +37,5 @@ ReactDOM.render(
     <App />,
     document.querySelector('#root')
 )
+
+
