@@ -1,32 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import UserPic from'./img/user1.png'; /* Import image*/
+
+// {} = JSX Interpolation
 
 const App = () => {
-const buttonText = 'Sample';
     return(
         <div className='ui comments'>
-            {/* comment */}
             <div className='comment'>
                 <a href='/' className='avatar'>
-                    <img alt='profile picture'></img>
+                    <img src={UserPic} alt='User pic' />
                 </a>
             </div>
-            {/* content */}
             <div className='content'>
                 <a href='/' className='author'>
-                    Sarah
+                    User
                 </a>
             </div>
-            {/* metadata */}
             <div className='metadata'>
-                Today at 10:00PM
+                <span className='date'>
+                    Today at 10:00PM
+                </span>
             </div>
-            {/* text */}
             <div className='text'>
                 It's amazing
             </div>
         </div>
-    );
+    )
 }
 
 ReactDOM.render(
