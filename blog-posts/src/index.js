@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import UserPic from'./img/user1.png'; /* Import image*/
+// import Userpic1 from './img/user2.png';
 
 // {} = JSX Interpolation
 
@@ -14,12 +15,30 @@ const App = () => {
             </div>
             <div className='content'>
                 <a href='/' className='author'>
-                    User
+                    Sample
                 </a>
             </div>
             <div className='metadata'>
                 <span className='date'>
                     Today at 10:00PM
+                </span>
+            </div>
+            <div className='text'>
+                It's amazing
+            </div>
+            <div className='comment'>
+                <a href='/' className='avatar'>
+                    <img src={UserPic} alt='User pic' />
+                </a>
+            </div>
+            <div className='content'>
+                <a href='/' className='author'>
+                    User
+                </a>
+            </div>
+            <div className='metadata'>
+                <span className='date'>
+                    Today at 8:00PM
                 </span>
             </div>
             <div className='text'>
