@@ -2,6 +2,19 @@ node -v
 npm install -g create-react-app
 create-react-app first-app
 
-
-
+--------------------------------
 Three tenets of components
+
+--------------------------------
+Component Nesting
+
+
+note: /* JSX Tag */
+
+{ } = referring the JS variables
+< > = referring the JS component
+
+
+React props system is very important 
+
+--------------------------------

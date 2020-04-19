@@ -1,49 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserPic from'./img/user1.png'; /* Import image*/
-// import Userpic1 from './img/user2.png';
-
-// {} = JSX Interpolation
+import SingleComment from './SingleComment';
 
 const App = () => {
-    return(
-        <div className='ui comments'>
-            <div className='comment'>
-                <a href='/' className='avatar'>
-                    <img src={UserPic} alt='User pic' />
-                </a>
-            </div>
-            <div className='content'>
-                <a href='/' className='author'>
-                    Sample
-                </a>
-            </div>
-            <div className='metadata'>
-                <span className='date'>
-                    Today at 10:00PM
-                </span>
-            </div>
-            <div className='text'>
-                It's amazing
-            </div>
-            <div className='comment'>
-                <a href='/' className='avatar'>
-                    <img src={UserPic} alt='User pic' />
-                </a>
-            </div>
-            <div className='content'>
-                <a href='/' className='author'>
-                    User
-                </a>
-            </div>
-            <div className='metadata'>
-                <span className='date'>
-                    Today at 8:00PM
-                </span>
-            </div>
-            <div className='text'>
-                It's amazing
-            </div>
+    return (
+        <div>
+            <SingleComment/>
+            <SingleComment/>
+            <SingleComment/>
         </div>
     )
 }
@@ -52,3 +16,8 @@ ReactDOM.render(
     <App />,
     document.querySelector('#root')
 )
+
+// NOTE: 
+// JSX Tag
+// { } = referring the JS variables
+// < > = referring the JS component
