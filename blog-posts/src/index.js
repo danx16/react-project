@@ -4,10 +4,12 @@ import SingleComment from './SingleComment';
 import UserPic1 from './img/user1.png';
 import UserPic2 from './img/user2.png';
 import UserPic3 from './img/user3.png';
+import UserCard from './UserCard';
 
 const App = () => {
     return (
         <div>
+            <UserCard />
             <SingleComment 
                 name='User'
                 date='Today at 1:00AM'
