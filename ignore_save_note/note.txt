@@ -15,6 +15,9 @@ note: /* JSX Tag */
 < > = referring the JS component
 
 
-React props system is very important 
+React PROPS system is very important 
 
+Property(Props) = customize those things either customize how their component looks or how a user interacts with it
 --------------------------------
+
+

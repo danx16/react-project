@@ -5,9 +5,9 @@ import SingleComment from './SingleComment';
 const App = () => {
     return (
         <div>
-            <SingleComment/>
-            <SingleComment/>
-            <SingleComment/>
+            <SingleComment name='user' />
+            <SingleComment name='sample' />
+            <SingleComment name='name' />
         </div>
     )
 }
