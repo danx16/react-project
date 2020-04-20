@@ -1,12 +1,11 @@
 import React from 'react';
-import UserPic from './img/user1.png';
 
 const SingleComment = (props) => {
-console.log(props.name);
+console.log(props);
     return (
         <div className='comment'>
             <a href='/' className='avatar'>
-                <img src={UserPic} alt='User pic' />
+                <img src={ props.picture } alt='User pic' />
             </a>
 
             <div className='content'>
@@ -16,11 +15,11 @@ console.log(props.name);
             </div>
             <div className='metadata'>
                 <span className='date'>
-                    Today at 10:00PM
+                    { props.date }
                 </span>
             </div>
             <div className='text'>
-                It's amazing
+                { props.text}   
             </div> 
         </div>
     )
