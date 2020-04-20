@@ -9,25 +9,33 @@ import UserCard from './UserCard';
 const App = () => {
     return (
         <div>
-            <UserCard />
-            <SingleComment 
-                name='User'
-                date='Today at 1:00AM'
-                text='It is Monday'
-                picture={UserPic1}
-            />
-            <SingleComment 
-                name='Sample'
-                date='Today at 11:00AM' 
-                text='It is Wednesday' 
-                picture={UserPic2}
-            />
-            <SingleComment 
-                name='Name' 
-                date='Today at 6:00AM'
-                text='It is Saturday' 
-                picture={UserPic3}
-            />
+            <UserCard>
+                Hi! I'm Dan. How may I help you?
+            </UserCard>
+            <UserCard> {/* This is the PARENT */}
+                <SingleComment // This is the CHILDREN
+                    name='User'
+                    date='Today at 1:00AM'
+                    text='It is Monday'
+                    picture={UserPic1}
+                />
+            </UserCard>
+            <UserCard>
+                <SingleComment 
+                    name='Sample'
+                    date='Today at 11:00AM' 
+                    text='It is Wednesday' 
+                    picture={UserPic2}
+                />
+            </UserCard>
+            <UserCard>
+                <SingleComment 
+                    name='Name' 
+                    date='Today at 6:00AM'
+                    text='It is Saturday' 
+                    picture={UserPic3}
+                />
+            </UserCard>
         </div>
     )
 }

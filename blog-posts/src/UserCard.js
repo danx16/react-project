@@ -1,12 +1,12 @@
 import React from 'react';
 
-const UserCard = () => {
+const UserCard = (props) => {
     return (
         <div className='ui card'>
             <div className='content'>
                 <div className='header'>Dan Company</div>
                 <div className='description'>
-                    Hi I'm Dan Company. I lived at Manila. It's nice to see you!
+                    { props.children }
                 </div>
                 </div>
                 <div className='ui bottom button'>
