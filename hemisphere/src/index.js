@@ -5,20 +5,20 @@ import HemisphereDisplay from './HemisphereDisplay';
 // CLASS-BASED COMPONENT
 // Refactor App Component
 
-class App extends React.Component { // It is allow us to put a ton of built in functionality from this other class called React Component into our class
-    
+class App extends React.Component {
     render() {
         window.navigator.geolocation.getCurrentPosition(
             (position) => console.log(position),
             (error) => console.log(error)
         );
-        return(
+        return (
             <div>
-                You are in the northern hemisphere
+                sample
             </div>
         )
     }
 }
+
 
 ReactDOM.render(
     <App />,
