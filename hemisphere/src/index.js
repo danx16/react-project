@@ -6,17 +6,28 @@ import HemisphereDisplay from './HemisphereDisplay';
 // Refactor App Component
 
 class App extends React.Component {
-    render() {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = { latitude: 25}
+
         window.navigator.geolocation.getCurrentPosition(
-            (position) => console.log(position),
+            (position) => {
+                this.setState({ latitude: position.coords.latitude })
+                this.state.latitude = position.coords.latitude
+            },
             (error) => console.log(error)
         );
+    }
+
+    render() { // render - needs for every single component
         return (
             <div>
-                sample
+               { this.state.latitude }
             </div>
         )
-    }
+    };
 }
 
 
