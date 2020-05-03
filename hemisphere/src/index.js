@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import HemisphereDisplay from './HemisphereDisplay';
-
-// CLASS-BASED COMPONENT
-// Refactor App Component
+import HemisphereDisplay from './HemisphereDisplay';
 
 class App extends React.Component {
 
@@ -14,26 +11,16 @@ class App extends React.Component {
             (position) => {
                 this.setState({ latitude: position.coords.latitude})
             },
-        (error) => {
-             this.setState({ errorMessage: error.message })
-        }
-    );
-    }
-
-
-    /* ComponentDidmount and ComponentDidUpdate */
-
-    // componentDidMount() {
-    //     console.log('componentDidMount')
-    // }
-    // componentDidUpdate() {
-    //     console.log('componentDidUpdate')
-    // }
+            (error) => {
+                this.setState({ errorMessage: error.message })
+            }
+    )
+}
 
     render(){
         if (!this.state.errorMessage && this.state.latitude) {
             return(
-                <div> { this.state.latitude } </div>
+                <div> <HemisphereDisplay latitude={this.state.latitude} /> </div> 
             )
         }
         if (this.state.errorMessage && !this.state.latitude) {
