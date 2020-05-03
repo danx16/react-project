@@ -1,22 +1,19 @@
 import React from 'react';
 
-/* const HemisphereDisplay = (props) => {
-    console.log(props.latitude);
-    return (
-        <div>Sample</div>
-        )
-} */
-
-// Deconstruction syntax
-// Use specific property which is latitude instead of props
-// and call it as latitude instead of props.latitude
-
 const HemisphereDisplay = ({latitude}) => {
     console.log(latitude);
+    
+    //Ternary Expression
+
+    const hemisphere = latitude > 0 ? 'Northern Hemisphere' : 'Southern Hemisphere'
+
     return (
-        <div>Sample</div>
+        <div> 
+            { hemisphere }
+        </div>
         )
 }
 
+// { } = Use those curly braces if I want to reference a javascript variable
 
 export default HemisphereDisplay;
