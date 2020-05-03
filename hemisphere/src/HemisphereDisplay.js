@@ -4,7 +4,7 @@ const HemisphereDisplay = ({latitude}) => {
     console.log(latitude);
     
     //Ternary Expression
-
+    // This is a conditional (ternary) operator
     const hemisphere = latitude > 0 ? 'Northern Hemisphere' : 'Southern Hemisphere'
 
     return (
