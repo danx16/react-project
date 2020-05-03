@@ -1,5 +1,5 @@
 import React from 'react';
-import '';
+import './Hemisphere.css';
 import NorthernPic from './image/NorthernHemisphere.jpg';
 import SouthernPic from './image/SouthernHemisphere.jpg';
 
