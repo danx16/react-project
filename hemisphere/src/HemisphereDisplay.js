@@ -1,19 +1,23 @@
 import React from 'react';
+import NorthernPic from './image/NorthernHemisphere.jpg';
+import SouthernPic from './image/SouthernHemisphere.jpg';
 
 const HemisphereDisplay = ({latitude}) => {
-    console.log(latitude);
-    
-    //Ternary Expression
-    // This is a conditional (ternary) operator
+
+    //Identical Ternary
+
     const hemisphere = latitude > 0 ? 'Northern Hemisphere' : 'Southern Hemisphere'
+    const hemispherePic = latitude > 0 ? NorthernPic : SouthernPic
 
     return (
-        <div> 
+        <div>
             { hemisphere }
+            <div>        
+                <img src={ hemispherePic } alt="" />
+            </div>
         </div>
         )
 }
 
-// { } = Use those curly braces if I want to reference a javascript variable
 
 export default HemisphereDisplay;
