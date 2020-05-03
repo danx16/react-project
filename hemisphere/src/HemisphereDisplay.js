@@ -17,14 +17,10 @@ const hemisphereConfig = {
 const HemisphereDisplay = ({latitude}) => {
 
     const hemisphere = latitude > 0 ? 'Northern' : 'Southern';
-    /* 
-        Reference back down inside of component hemisphere config square brackets inside of it.
-        Return object with a text and picture name inside of this object
-        Pull out that text and picture name 
-    */
     const { text, picture } = hemisphereConfig[hemisphere] 
 
     return (
+    <div> 
         <div className={ hemisphere } > 
             <div className='ui raised text container segment'>
                 <div className='image'>
@@ -35,6 +31,8 @@ const HemisphereDisplay = ({latitude}) => {
                 </div>
             </div>  
         </div>
+        <h1>Hello!</h1>
+    </div> 
     )
 }
 
