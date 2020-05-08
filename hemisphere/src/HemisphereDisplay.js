@@ -20,7 +20,6 @@ const HemisphereDisplay = ({latitude}) => {
     const { text, picture } = hemisphereConfig[hemisphere] 
 
     return (
-    <div> 
         <div className={ hemisphere } > 
             <div className='ui raised text container segment'>
                 <div className='image'>
@@ -31,9 +30,7 @@ const HemisphereDisplay = ({latitude}) => {
                 </div>
             </div>  
         </div>
-        <h1>Hello!</h1>
-    </div> 
     )
 }
 
-export default HemisphereDisplay;
+export default HemisphereDisplay;	
