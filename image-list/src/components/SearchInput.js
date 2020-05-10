@@ -27,6 +27,7 @@ class SearchInput extends React.Component {
 
 // Uncontrolled
 
+
 class SearchInput extends React.Component {
     
     state = {entry: ''}
