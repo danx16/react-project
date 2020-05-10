@@ -1,0 +1,3 @@
+how to install axios using cmd?
+npm install --save axios
+
