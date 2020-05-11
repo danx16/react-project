@@ -1,48 +1,25 @@
 import React from 'react';
+import SearchInput from './SearchInput';
+import axios from 'axios';
 
-// Controlled
-class SearchInput extends React.Component {
 
-    state={ entry:'' }
-
-    // Re-create a new version of function called onFormSubmit
-
-   /*  constructor(){
-        super()
-        this.onFormSubmit = this.onFormSubmit.bind(this)
-
-        OR
-
-        onFormSubmit = (event) => {
-        event.preventDefault() // prevent that behavior by calling event
-        console.log(this.state.entry)
-    }
-    }*/
+class App extends React.Component {
     
-    onFormSubmit = (event) => {
-        event.preventDefault() // prevent that behavior by calling event
-        console.log(this.state.entry)
+    state = { images:[] }
+
+    onSearchSubmit = async (entry) => {
+        const response = await axios.get(`https://pixabay.com/api/?key=16476138-de1a69ef4e3acf654b17bbcb6&q=${entry}&image_type=photo`)
+        console.log(this)  
+        this.setState({images:response.data.hits})
     }
 
-    render() { // Rendered
-        return (
-            <div className='ui segment'>
-                <form onSubmit={this.onFormSubmit} className='ui form'>
-                    <div className='field'>
-                        <div className='ui massive icon input'>
-                        <input 
-                            type="text" 
-                            placeholder='search...' 
-                            onChange={(event) => this.setState({entry:event.target.value})} 
-                            value={this.state.entry}
-                        /> 
-                        <i className='search icon'></i>
-                        </div>
-                    </div>
-                </form>
+    render() {
+        return(
+            <div className='ui container' style={{marginTop:'30px'}} >
+            <SearchInput onSearchSubmit={this.onSearchSubmit} />
+            We have {this.state.images.length} images
             </div>
         )
     }
 }
-
-export default SearchInput;
+export default App;
