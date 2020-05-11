@@ -1,25 +1,61 @@
 import React from 'react';
-import SearchInput from './SearchInput';
-import axios from 'axios';
 
-
-class App extends React.Component {
+// Controlled
+class SearchInput extends React.Component {
     
-    state = { images:[] }
+    state={ entry:'' }
 
-    onSearchSubmit = async (entry) => {
-        const response = await axios.get(`https://pixabay.com/api/?key=16476138-de1a69ef4e3acf654b17bbcb6&q=${entry}&image_type=photo`)
-        console.log(this)  
-        this.setState({images:response.data.hits})
+    onFormSubmit = (event) => {
+        event.preventDefault() // prevent that behavior by calling event
+        console.log(this.state.entry)
+        this.props.onSearchSubmit(this.state.entry)
     }
 
-    render() {
-        return(
-            <div className='ui container' style={{marginTop:'30px'}} >
-            <SearchInput onSearchSubmit={this.onSearchSubmit} />
-            We have {this.state.images.length} images
+    render() { // Rendered
+        return (
+            <div className='ui segment'>
+                <form onSubmit={this.onFormSubmit} className='ui form'>
+                    <div className='field'>
+                        <div className='ui massive icon input'>
+                        <input 
+                            type="text" 
+                            placeholder='search...' 
+                            onChange={(event) => this.setState({entry:event.target.value})} 
+                            value={this.state.entry}
+                        /> 
+                        <i className='search icon'></i>
+                        </div>
+                    </div>
+                </form>
             </div>
         )
     }
 }
-export default App;
+
+/*
+// Uncontrolled
+class SearchInput extends React.Component {
+    
+    state = {entry: ''}
+    render() { // Rendered
+        return (
+            <div className='ui segment'>
+                <form action="" className='ui form'>
+                    <div className='field'>
+                        <div className='ui massive icon input'>
+                        <input 
+                        type="text" 
+                        placeholder='search...' 
+                        onChange={ (event) => this.setState({entry:event.target.value})}
+                        value={this.state.entry} 
+                        /> 
+                        <i className='search icon'></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        )
+    }
+}
+ */
+export default SearchInput;
