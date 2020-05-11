@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ImageList = (props) => {
-    const img = props.images.map((image) => {
-        return <img src={image.webformatURL} alt="pic"/>
+    const ImageList = props.images.map((image) => {
+        return <img key={image.id} src={image.webformatURL} alt="pic"/>
     })
     return(
         <div>
-            {img}
+            {ImageList}
         </div>
     )
 }
