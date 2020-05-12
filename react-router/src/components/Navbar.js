@@ -1,8 +1,11 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, withRouter} from 'react-router-dom';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+    setTimeout(() => {
+        props.history.push('./about')
+    }, 5000);
     return(
         <nav className='ui raised very padded segment'>
             <a className='ui teal inverted segment' href="/">Sample</a>
@@ -15,4 +18,6 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+// Higher order component is withRouter()
+// And It's applying these properties to the props
+export default withRouter(Navbar);
