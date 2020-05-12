@@ -5,11 +5,11 @@ const Contact = () => {
     return(
         <div>
             <div className='ui raised very padded text container segment'style={{marginTop:'80px'}}>
-                <Link to='/card/sample' className='ui header'>Sample</Link>
+                <Link to='/sample' className='ui header'>Sample</Link>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
             </div>
             <div className='ui raised very padded text container segment'style={{marginTop:'80px'}}>
-                <Link to='/card/dan' className='ui header'>Dan</Link>
+                <Link to='/dan' className='ui header'>Dan</Link>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
             </div>
         </div>
