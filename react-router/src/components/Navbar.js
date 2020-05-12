@@ -5,7 +5,7 @@ import {Link, NavLink, withRouter} from 'react-router-dom';
 const Navbar = (props) => {
     setTimeout(() => {
         props.history.push('./about')
-    }, 5000);
+    }, 2000);
     return(
         <nav className='ui raised very padded segment'>
             <a className='ui teal inverted segment' href="/">Sample</a>
